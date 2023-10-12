@@ -375,4 +375,10 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+function filterMemer(obj) {
+  return obj.member !== null;
+}
+
+const newBills = bills.filter(filterMemer);
+
+console.log(newBills);

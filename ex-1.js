@@ -374,3 +374,11 @@ const bills = [
 ];
 
 // Start coding here
+
+function totalPay(init, obj) {
+  return obj.total + init;
+}
+
+let result = bills.reduce(totalPay, 0);
+
+console.log(`Total bill transaction is ${result}`);
