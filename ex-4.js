@@ -374,4 +374,22 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+function memberFilter(obj) {
+  return obj.member !== null;
+}
+
+function memberMap(obj) {
+  return obj.member.name;
+}
+
+const allMembers = bills.filter(memberFilter).map(memberMap);
+
+function checkMember(item, index) {
+  return allMembers.indexOf(item) !== index;
+}
+
+let dupicateMember = allMembers.filter(checkMember);
+
+console.log(
+  `Unique Members Count:${allMembers.length - dupicateMember.length}`
+);
